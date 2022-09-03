@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the BPM #4</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/javascript" href="bpm.js">
+    <link rel="stylesheet" type="text/javascript" href="javascript/check4.js">
+</head>
+
+<body>
+
+    <div id="root">
+        <h1>Guess the BPM #4</h1>
+        <div class="lagu">
+            <audio controls>
+                <source src="audio/4.ogg" type="audio/ogg">
+            </audio>
+        </div>
+        <div class="input-song">
+            <input class="inputColm" type="text" id="inputSong4" />
+            <button class="submit" id="subMit" onclick="check()">Submit</button>
+            <p id="zonk">BPM Harus Diisi!</p>
+            <p id="nonum">BPM Pake Angka NJING!</p>
+            <h5 id="benar">BPM BENAR!</h5>
+            <h5 id="salah">BPM SALAH!</h5>
+            <div id="pageButton">
+                <a href="guess-3.html">
+                    <button class="pnbtn">⪻ Sebelumnya</button>
+                </a>
+                <a href="guess-5.html">
+                    <button class="pnbtn">Selanjutnya ⪼</button>
+                </a>
+            </div>
+        </div>
+        <div class="bpm-app">
+            <div class="bpm" id="result">-</div>
+            <h4>Tekan 'Keyboard' (bebas) pada kolom atau klik tombol Tap untuk mulai menghitung BPM.</h4>
+            <input class="inputKey" type="text" id="tapKey" onkeypress="beatsPerMinute.show()" />
+            <button class="tapTempo" onclick="beatsPerMinute.show()">Tap</button>
+            <br>
+            <button class="reset" onclick="beatsPerMinute.reset()">RESET</button>
+        </div>
+    </div>
+
+    <script src="bpm.js" type="text/javascript"></script>
+    <script src="javascript/check4.js" type="text/javascript"></script>
+</body>
+
+</html>
